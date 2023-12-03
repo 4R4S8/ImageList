@@ -1,0 +1,32 @@
+﻿@model ImageView
+
+<form method="post">
+    <div class="border p-3 mt-4 align-content-center">
+        <div class="row pb-2">  
+            <h2 class="text-primary">Add Image</h2>
+        </div>
+     
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Multiple Image Upload</title>
+        </head>
+        <body>
+            <div class="container mt-5">
+                <form action="ImageView/Add" method="post" enctype="multipart/form-data">
+                    <div class="custom-file">
+                        @*<input asp-for="ImageFile" name="ImageFile" type="file" class="input-group-text" id="imageUpload" accept="image/* >*@
+                        <input asp-for="Path" type="text"></input>
+                        @*<span asp-validation-for="ImageFile" class="text-danger"></span>*@
+                        <label class="custom-file-label" for="imageUpload">Choose multiple images</label>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary mt-2">Upload Images</button>
+                </form>
+                
+            </div>
+            <button asp-controller="ImageView" asp-action="Index" class="btn btn-secondary">Back</button>
+        </body>
+    </div>
+</form>
+
