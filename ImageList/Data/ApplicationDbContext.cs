@@ -10,3 +10,4 @@ namespace ImageList.Data
         public DbSet<ImageView> IamgeView { get; set; }
     }
 }
+

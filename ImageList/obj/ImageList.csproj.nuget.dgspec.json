@@ -1,26 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\4R4S8\\source\\repos\\ImageList\\ImageList\\ImageList.csproj": {}
+    "C:\\Users\\a.zomorodi\\Desktop\\ImageList (2)\\ImageList\\ImageList\\ImageList.csproj": {}
   },
   "projects": {
-    "C:\\Users\\4R4S8\\source\\repos\\ImageList\\ImageList\\ImageList.csproj": {
+    "C:\\Users\\a.zomorodi\\Desktop\\ImageList (2)\\ImageList\\ImageList\\ImageList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\4R4S8\\source\\repos\\ImageList\\ImageList\\ImageList.csproj",
+        "projectUniqueName": "C:\\Users\\a.zomorodi\\Desktop\\ImageList (2)\\ImageList\\ImageList\\ImageList.csproj",
         "projectName": "ImageList",
-        "projectPath": "C:\\Users\\4R4S8\\source\\repos\\ImageList\\ImageList\\ImageList.csproj",
-        "packagesPath": "C:\\Users\\4R4S8\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\4R4S8\\source\\repos\\ImageList\\ImageList\\obj\\",
+        "projectPath": "C:\\Users\\a.zomorodi\\Desktop\\ImageList (2)\\ImageList\\ImageList\\ImageList.csproj",
+        "packagesPath": "C:\\Users\\a.zomorodi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a.zomorodi\\Desktop\\ImageList (2)\\ImageList\\ImageList\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\4R4S8\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\a.zomorodi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -68,6 +61,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "WindowsAzure.Storage": {
+              "target": "Package",
+              "version": "[9.3.3, )"
             }
           },
           "imports": [
@@ -76,7 +73,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -88,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
