@@ -502,3 +502,5 @@ C:\Users\a.zomorodi\Desktop\ImageList (2)\ImageList\ImageList\obj\Debug\net6.0\r
 C:\Users\a.zomorodi\Desktop\ImageList (2)\ImageList\ImageList\obj\Debug\net6.0\ImageList.pdb
 C:\Users\a.zomorodi\Desktop\ImageList (2)\ImageList\ImageList\obj\Debug\net6.0\ImageList.genruntimeconfig.cache
 C:\Users\a.zomorodi\Desktop\ImageList (2)\ImageList\ImageList\obj\Debug\net6.0\ref\ImageList.dll
+C:\Users\a.zomorodi\Desktop\ImageList (2)\ImageList\ImageList\bin\Debug\net6.0\Antlr3.Runtime.dll
+C:\Users\a.zomorodi\Desktop\ImageList (2)\ImageList\ImageList\bin\Debug\net6.0\WebGrease.dll

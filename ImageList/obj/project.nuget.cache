@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Rqh2w6VCqkpG8cNcnP1YjAGDWGCZud8G/7d3kbbECGiNiU0OmChOVzrXpGIVgRJa3VQEGYpwuKcygsWHrjunIA==",
+  "dgSpecHash": "RoBwaVOK4zGCI/FqDag/ZaHxzqcw4pMINLti+GPC5AjIptrePEq4rmcSltFH8ax5fqj3GR8pmIb1jIer/ruSsw==",
   "success": true,
   "projectFilePath": "C:\\Users\\a.zomorodi\\Desktop\\ImageList (2)\\ImageList\\ImageList\\ImageList.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\a.zomorodi\\.nuget\\packages\\antlr\\3.4.1.9004\\antlr.3.4.1.9004.nupkg.sha512",
     "C:\\Users\\a.zomorodi\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\a.zomorodi\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\a.zomorodi\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",
@@ -225,7 +226,29 @@
     "C:\\Users\\a.zomorodi\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\a.zomorodi\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\a.zomorodi\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\a.zomorodi\\.nuget\\packages\\webgrease\\1.6.0\\webgrease.1.6.0.nupkg.sha512",
     "C:\\Users\\a.zomorodi\\.nuget\\packages\\windowsazure.storage\\9.3.3\\windowsazure.storage.9.3.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Antlr 3.4.1.9004' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Antlr",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'WebGrease 1.6.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "WebGrease",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

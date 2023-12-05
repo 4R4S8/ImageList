@@ -62,6 +62,10 @@
               "target": "Package",
               "version": "[6.5.0, )"
             },
+            "WebGrease": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
             "WindowsAzure.Storage": {
               "target": "Package",
               "version": "[9.3.3, )"

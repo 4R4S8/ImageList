@@ -3,39 +3,43 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<heads>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
   <script>
-    $(document).ready(function () {
-      $(".list").click(function () {
-            alert(this.textContent)
-          //alert(this.textContent)
-      });
-    });
+    //$(document).ready(function () {
+    //  $("#list").click(function () {
+    //        alert(this.textContent)
+    //  });
+    //});
   </script>
+    <div class="container p-3">
+</div>
+</heads>
   <body>
     <div class="container p-3">
       <div class="row">
         <div class="col">
-          <ul class="list-group-item-primary list">
+          <ul class="list-group-item-primary" id="list">
                 @foreach(var obj in Model)
                 {
-                    <li>@obj.Name</li>
-                    <ul>
-                            <li>@obj.GUID</li>
-                    </ul>
+                        <li data="@obj.GUID"><a href="/ImageView/Show/@obj.GUID">@obj.Name</a></li>
+                    if (obj.Extension==""){
+                        <ul>
+                                <li><a>@obj.Name</a></li>
+                        </ul>
+                    }
                 }
           </ul>
         </div>
         <div class="form-group border col">
           <img
             id="manipulableImage"
-            src="file:///C:\Users\4R4S8\Pictures\test\3.jpg"
+            src=""
             alt="Image place holder"
             class="img-fluid rounded float-right"
-            style="display: none"
+            style="display: block"
           />
-          <canvas
+      @*    <canvas
             style="
               display: block;
               margin: 1em auto;
@@ -43,17 +47,11 @@
               border: 1px solid #ccc;
             "
             class="rounded"
-          ></canvas>
+          ></canvas>*@
         </div>
       </div>
     </div>
     <a asp-controller="ImageView" asp-action="Add" class="btn btn-primary">Add Image</a>
     <script src="~/js/site.js"></script>
-     <img
-            id="manipulableImage"
-            src="C:\Users\4R4S8\Pictures\test\3.jpg"
-            alt="Image place holder"
-            class="img-fluid rounded float-right"
-          />
   </body>
 
