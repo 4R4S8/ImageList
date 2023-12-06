@@ -22,22 +22,13 @@ namespace ImageList.Controllers
         {
             _db = db;
         }
-
-        public IActionResult Index()
-        {
-            return View();
-        }
         //GET
         [HttpGet]
         public IActionResult Index(string id)
         {
             ViewModel vmm = new ViewModel();
-            if (id==null)
-            {
-                vmm.ImageListCollection = _db.IamgeView.ToList();
-                return View(vmm);
-            }
-            if (id!=null)
+            vmm.ImageListCollection = _db.IamgeView.ToList();
+            if (id != null)
             {
                 Guid guid = new Guid(id);
 
@@ -50,10 +41,11 @@ namespace ImageList.Controllers
                 {
                     byte[] imageByte = System.IO.File.ReadAllBytes(result);
                     vmm.ImageViewCollection = imageByte;
-                    return View(vmm);
+                    
                 }
             }
-            return View();
+            return View(vmm);
+            
         }
 
         //GET
@@ -78,7 +70,7 @@ namespace ImageList.Controllers
                     obj.CreationDate = info.CreationTime.ToString();
                     _db.Add(obj);
                     _db.SaveChanges();
-                    return RedirectToPage("Index");
+                    return RedirectToAction("Index");
                 }
             }
             return View();
