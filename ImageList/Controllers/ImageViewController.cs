@@ -1,5 +1,6 @@
 ﻿using ImageList.Data;
 using ImageList.Models;
+using ImageList.ViewModels;
 using Microsoft.Ajax.Utilities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +8,7 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.VisualBasic;
 using Microsoft.WindowsAzure.Storage.Auth;
+using System.Collections.Generic;
 using System.Drawing.Text;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
@@ -23,9 +25,35 @@ namespace ImageList.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<ImageView> image;
-            image = _db.IamgeView;
-            return View(image);
+            return View();
+        }
+        //GET
+        [HttpGet]
+        public IActionResult Index(string id)
+        {
+            ViewModel vmm = new ViewModel();
+            if (id==null)
+            {
+                vmm.ImageListCollection = _db.IamgeView.ToList();
+                return View(vmm);
+            }
+            if (id!=null)
+            {
+                Guid guid = new Guid(id);
+
+                var result = _db.IamgeView
+                    .Where(e => e.GUID == guid)
+                    .Select(e => e.Path)
+                    .FirstOrDefault();
+
+                if (result != null)
+                {
+                    byte[] imageByte = System.IO.File.ReadAllBytes(result);
+                    vmm.ImageViewCollection = imageByte;
+                    return View(vmm);
+                }
+            }
+            return View();
         }
 
         //GET
@@ -50,28 +78,13 @@ namespace ImageList.Controllers
                     obj.CreationDate = info.CreationTime.ToString();
                     _db.Add(obj);
                     _db.SaveChanges();
-                    return RedirectToAction("Index");
+                    return RedirectToPage("Index");
                 }
             }
             return View();
          
         }
 
-         public IActionResult Show(string id) 
-        {
-            Guid guid = new Guid(id);
-
-            var result = _db.IamgeView
-                .Where(e => e.GUID == guid)
-                .Select(e => e.Path)
-                .FirstOrDefault();
-
-            if (result!=null)
-            {
-                byte[] imageByte = System.IO.File.ReadAllBytes(result);
-                return View(imageByte);
-            }
-            return RedirectToAction("Add");
-        }
+        
     }
 }
